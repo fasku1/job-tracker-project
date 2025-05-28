@@ -8,6 +8,7 @@ import {
   Alert,
 } from "react-bootstrap";
 import bounce from '../bounce.gif';
+import sleepyku from '../Untitled_Artwork.png';
 
 function JobForm() {
   const [jobTitle, setJobTitle] = useState("");
@@ -113,7 +114,7 @@ function JobForm() {
 
   return (
     <Container className="my-5">
-      <img src={bounce} alt="My Logo" />
+      <img src={sleepyku} alt="Artwork" style={{ width: "450px", height: "auto" }} />
 
       <h3 className="mb-4 text-center">Save Applied Jobs</h3>
 
