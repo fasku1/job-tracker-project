@@ -1,19 +1,41 @@
-# Makefile at root of your project
+# Root Makefile
 
-# Backend and frontend folders
 BACKEND_DIR=job-tracker
 FRONTEND_DIR=job-tracker-frontend
 
-# Targets
+# Install dependencies
+install:
+	cd $(BACKEND_DIR) && npm install
+	cd $(FRONTEND_DIR) && npm install
+
+# Run backend in foreground with live logs
+backend:
+	cd $(BACKEND_DIR) && npm install && node index.js
+
+# OR: Run backend with nodemon (if you have it installed globally or locally)
+backend-dev:
+	cd $(BACKEND_DIR) && npm install && npx nodemon index.js
+
+# Run frontend (in a separate terminal)
+frontend:
+	cd $(FRONTEND_DIR) && npm install && npm run dev
+
+# Run both (backend in background, logs to backend.log; frontend in terminal)
 run:
-	@echo "🚀 Starting backend..."
-	cd $(BACKEND_DIR) && npm install && node index.js &
+	@echo "🚀 Starting backend in background..."
+	cd $(BACKEND_DIR) && npm install && node index.js > ../backend.log 2>&1 &
 
 	@echo "🌐 Starting frontend..."
 	cd $(FRONTEND_DIR) && npm install && npm run dev
 
-stop:
-	@echo "🛑 Stopping all node processes..."
-	pkill -f "node index.js" || true
+# View backend logs (real-time)
+logs:
+	tail -f backend.log
 
-.PHONY: run stop
+# Stop backend
+stop:
+	@echo "🛑 Stopping all node backend processes..."
+	pkill -f "node index.js" || true
+	pkill -f "nodemon index.js" || true
+
+.PHONY: install backend backend-dev frontend run logs stop

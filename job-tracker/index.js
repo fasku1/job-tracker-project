@@ -18,7 +18,7 @@ const sheetId = process.env.GOOGLE_SHEET_ID;
 
 // ✅ Route 1: Add job to Google Sheet
 app.post("/add-job", async (req, res) => {
-  const { jobTitle, jobUrl, dateApplied } = req.body;
+  const { jobTitle, jobUrl, company, dateApplied } = req.body;
 
   try {
     const client = await auth.getClient();
@@ -29,7 +29,7 @@ app.post("/add-job", async (req, res) => {
       range: "Sheet1!A2", // ✅ starts below the header
       valueInputOption: "USER_ENTERED",
       resource: {
-        values: [[`=HYPERLINK("${jobUrl}", "${jobTitle}")`, dateApplied, "Pending"]],
+        values: [[`=HYPERLINK("${jobUrl}", "${jobTitle} @ ${company}")`, dateApplied, "Pending"]],
       },
     });
 
@@ -61,6 +61,45 @@ app.get("/get-job-title", async (req, res) => {
     res.status(500).json({ error: "❌ Could not fetch title" });
   }
 });
+
+// ✅ Route 3: Auto-fetch company from a URL
+app.get("/get-company", async (req, res) => {
+  try {
+    const jobUrl = req.query.url;
+
+    if (!jobUrl) {
+      return res.status(400).json({ error: "Missing URL parameter" });
+    }
+
+    const hostname = new URL(jobUrl).hostname;
+    console.log("Parsed hostname:", hostname);
+
+    // Split the domain
+    const parts = hostname.split(".").filter(Boolean);
+
+    // Common subdomains to ignore
+    const ignore = ["www", "jobs", "careers"];
+
+    // Remove ignored subdomains
+    const filtered = parts.filter(p => !ignore.includes(p.toLowerCase()));
+
+    let company = "unknown";
+
+    if (filtered.length >= 2) {
+      company = filtered[filtered.length - 2]; // get second-to-last part, e.g. fetchrewards from fetchrewards.com
+    } else if (filtered.length === 1) {
+      company = filtered[0];
+    }
+
+    return res.json({ company });
+  } catch (err) {
+    console.error("Error in /get-company:", err);
+    return res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
+
+
 
 app.listen(3000, () => {
   console.log("🚀 Backend running on http://localhost:3000");

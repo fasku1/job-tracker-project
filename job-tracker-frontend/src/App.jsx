@@ -11,6 +11,7 @@ import bounce from '../bounce.gif';
 
 function JobForm() {
   const [jobTitle, setJobTitle] = useState("");
+  const [company, setCompany] = useState("");
   const [jobUrl, setJobUrl] = useState(() => {
     return sessionStorage.getItem("jobUrl") || "";
   });
@@ -24,12 +25,13 @@ function JobForm() {
     setDateApplied(formatted);
   }, []);
 
-  // ✅ Auto-fetch job title when job URL changes
+  // ✅ Auto-fetch job title and company when job URL changes
   useEffect(() => {
     if (!jobUrl) return;
 
     const fetchJobTitle = async () => {
       setJobTitle("Fetching title...");
+      setCompany("Fetching company...")
 
       try {
         const res = await fetch(
@@ -46,6 +48,23 @@ function JobForm() {
         console.error("❌ Failed to fetch job title:", err);
         setJobTitle("Failed to fetch");
       }
+
+      try {
+        const res = await fetch(
+          `http://localhost:3000/get-company?url=${encodeURIComponent(jobUrl)}`
+        );
+        const data = await res.json();
+
+        if (data.company) {
+          setCompany(data.company);
+        } else {
+          setCompany("Unknown company");
+        }
+      } catch (err) {
+        console.error("❌ Failed to fetch job company:", err);
+        setCompany("Failed to fetch");
+      }
+
     };
 
     fetchJobTitle();
@@ -53,34 +72,44 @@ function JobForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     try {
       const res = await fetch("http://localhost:3000/add-job", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ jobTitle, jobUrl, dateApplied }),
+        body: JSON.stringify({ jobTitle, jobUrl, company, dateApplied }),
       });
-
+  
       const data = await res.json();
       if (res.ok) {
         setStatus("✅ Job saved!");
         setJobTitle("");
         setJobUrl("");
         sessionStorage.removeItem("jobUrl"); // ✅ clear on successful submit
-
+  
         // Reset date to first of the month again after submit
         const today = new Date();
         const formatted = today.toISOString().split("T")[0];
         setDateApplied(formatted);
+  
+        // Clear status after 3 seconds
+        setTimeout(() => setStatus(""), 3000);
       } else {
         setStatus("❌ Error: " + (data.error || "Could not save"));
+  
+        // Clear error after 5 seconds (optional)
+        setTimeout(() => setStatus(""), 5000);
       }
     } catch (err) {
       setStatus("❌ Network error");
+      
+      // Clear network error after 5 seconds (optional)
+      setTimeout(() => setStatus(""), 5000);
     }
   };
+  
 
   return (
     <Container className="my-5">
@@ -114,6 +143,19 @@ function JobForm() {
               placeholder="e.g. Software Engineer"
               value={jobTitle}
               onChange={(e) => setJobTitle(e.target.value)}
+              required
+            />
+          </Col>
+        </Form.Group>
+
+        <Form.Group as={Row} className="mb-3" controlId="formJobTitle">
+          <Form.Label column sm={3}>Company</Form.Label>
+          <Col sm={9}>
+            <Form.Control
+              type="text"
+              placeholder="e.g. Google"
+              value={company}
+              onChange={(e) => setCompany(e.target.value)}
               required
             />
           </Col>
