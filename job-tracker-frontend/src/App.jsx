@@ -93,6 +93,8 @@ function JobForm() {
         setStatus("✅ Job saved!");
         setJobTitle("");
         setJobUrl("");
+        setCompany("");
+        setIsOn(false);
         sessionStorage.removeItem("jobUrl"); // ✅ clear on successful submit
 
         // Reset date to first of the month again after submit
@@ -178,17 +180,29 @@ function JobForm() {
           </Col>
         </Form.Group>
 
-        <button onClick={handleClick} style={{
-          padding: '10px',
-          backgroundColor: isOn ? 'limegreen' : 'lightgray',
-          color: 'white',
-          border: 'none',
-          borderRadius: '20px',
-          cursor: 'pointer',
-          marginBottom: '20px'
-        }}>
-          {isOn ? 'ON' : 'OFF'}
-        </button>
+
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center', // 👈 aligns vertically
+            gap: '10px', // 👈 space between text and button
+            marginBottom: '20px',
+          }}
+        >
+          <span style={{ margin: 0, fontSize: '16px' }}>Desired/Favorite Job?</span>
+
+          <button onClick={handleClick} style={{
+            padding: '10px',
+            backgroundColor: isOn ? 'limegreen' : 'lightgray',
+            color: 'white',
+            border: 'none',
+            borderRadius: '20px',
+            cursor: 'pointer',
+          }}>
+            {isOn ? 'ON' : 'OFF'}
+          </button>
+        </div>
 
         <div className="text-center">
           <Button variant="primary" type="submit">
