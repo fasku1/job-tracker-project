@@ -18,6 +18,11 @@ function JobForm() {
   });
   const [dateApplied, setDateApplied] = useState("");
   const [status, setStatus] = useState("");
+  const [isOn, setIsOn] = useState(false);
+
+  const handleClick = () => {
+    setIsOn(prev => !prev);
+  };
 
   // ✅ Auto-fill dateApplied with the first day of the current month
   useEffect(() => {
@@ -73,7 +78,7 @@ function JobForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     try {
       const res = await fetch("http://localhost:3000/add-job", {
         method: "POST",
@@ -82,35 +87,35 @@ function JobForm() {
         },
         body: JSON.stringify({ jobTitle, jobUrl, company, dateApplied }),
       });
-  
+
       const data = await res.json();
       if (res.ok) {
         setStatus("✅ Job saved!");
         setJobTitle("");
         setJobUrl("");
         sessionStorage.removeItem("jobUrl"); // ✅ clear on successful submit
-  
+
         // Reset date to first of the month again after submit
         const today = new Date();
         const formatted = today.toISOString().split("T")[0];
         setDateApplied(formatted);
-  
+
         // Clear status after 3 seconds
         setTimeout(() => setStatus(""), 3000);
       } else {
         setStatus("❌ Error: " + (data.error || "Could not save"));
-  
+
         // Clear error after 5 seconds (optional)
         setTimeout(() => setStatus(""), 5000);
       }
     } catch (err) {
       setStatus("❌ Network error");
-      
+
       // Clear network error after 5 seconds (optional)
       setTimeout(() => setStatus(""), 5000);
     }
   };
-  
+
 
   return (
     <Container className="my-5">
@@ -172,6 +177,18 @@ function JobForm() {
             />
           </Col>
         </Form.Group>
+
+        <button onClick={handleClick} style={{
+          padding: '10px',
+          backgroundColor: isOn ? 'limegreen' : 'lightgray',
+          color: 'white',
+          border: 'none',
+          borderRadius: '20px',
+          cursor: 'pointer',
+          marginBottom: '20px'
+        }}>
+          {isOn ? 'ON' : 'OFF'}
+        </button>
 
         <div className="text-center">
           <Button variant="primary" type="submit">
