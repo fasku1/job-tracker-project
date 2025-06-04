@@ -18,7 +18,7 @@ const sheetId = process.env.GOOGLE_SHEET_ID;
 
 // ✅ Route 1: Add job to Google Sheet
 app.post("/add-job", async (req, res) => {
-  const { jobTitle, jobUrl, company, dateApplied } = req.body;
+  const { jobTitle, jobUrl, company, dateApplied, favoriteJob } = req.body;
 
   try {
     const client = await auth.getClient();
@@ -29,7 +29,7 @@ app.post("/add-job", async (req, res) => {
       range: "Sheet1!A2", // ✅ starts below the header
       valueInputOption: "USER_ENTERED",
       resource: {
-        values: [[`=HYPERLINK("${jobUrl}", "${jobTitle} @ ${company}")`, dateApplied, "Pending"]],
+        values: [[`=HYPERLINK("${jobUrl}", "${jobTitle} @ ${company}")`, dateApplied, favoriteJob ? "Pending ⭐" : "Pending"]],
       },
     });
 

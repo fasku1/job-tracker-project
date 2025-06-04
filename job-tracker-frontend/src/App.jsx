@@ -18,10 +18,15 @@ function JobForm() {
   });
   const [dateApplied, setDateApplied] = useState("");
   const [status, setStatus] = useState("");
-  const [isOn, setIsOn] = useState(false);
+  const [login, setLogin] = useState(false);
+  const [favoriteJob, setFavoriteJob] = useState(false);
 
-  const handleClick = () => {
-    setIsOn(prev => !prev);
+  const handleFavorite = () => {
+    setFavoriteJob(prev => !prev);
+  };
+
+  const handleLogin = () => {
+    setLogin(prev => !prev);
   };
 
   // ✅ Auto-fill dateApplied with the first day of the current month
@@ -85,7 +90,7 @@ function JobForm() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ jobTitle, jobUrl, company, dateApplied }),
+        body: JSON.stringify({ jobTitle, jobUrl, company, dateApplied, favoriteJob }),
       });
 
       const data = await res.json();
@@ -94,7 +99,7 @@ function JobForm() {
         setJobTitle("");
         setJobUrl("");
         setCompany("");
-        setIsOn(false);
+        setFavoriteJob(false);
         sessionStorage.removeItem("jobUrl"); // ✅ clear on successful submit
 
         // Reset date to first of the month again after submit
@@ -180,6 +185,29 @@ function JobForm() {
           </Col>
         </Form.Group>
 
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center', // 👈 aligns vertically
+            gap: '10px', // 👈 space between text and button
+            marginBottom: '20px',
+          }}
+        >
+          <span style={{ margin: 0, fontSize: '16px' }}>Login Required?</span>
+
+          <button onClick={handleLogin} style={{
+            padding: '10px',
+            backgroundColor: login ? 'limegreen' : 'lightgray',
+            color: 'white',
+            border: 'none',
+            borderRadius: '20px',
+            cursor: 'pointer',
+            fontWeight: 'bold'
+          }}>
+            {login ? 'ON' : 'OFF'}
+          </button>
+        </div>
 
         <div
           style={{
@@ -192,15 +220,16 @@ function JobForm() {
         >
           <span style={{ margin: 0, fontSize: '16px' }}>Desired/Favorite Job?</span>
 
-          <button onClick={handleClick} style={{
+          <button onClick={handleFavorite} style={{
             padding: '10px',
-            backgroundColor: isOn ? 'limegreen' : 'lightgray',
+            backgroundColor: favoriteJob ? 'limegreen' : 'lightgray',
             color: 'white',
             border: 'none',
             borderRadius: '20px',
             cursor: 'pointer',
+            fontWeight: 'bold'
           }}>
-            {isOn ? 'ON' : 'OFF'}
+            {favoriteJob ? 'ON' : 'OFF'}
           </button>
         </div>
 
