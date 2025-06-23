@@ -29,6 +29,12 @@ function JobForm() {
     setLogin(prev => !prev);
   };
 
+  const clearText = () => {
+    setJobUrl("");
+    setJobTitle("");
+    setCompany("");
+  }
+
   // ✅ Auto-fill dateApplied with the first day of the current month
   useEffect(() => {
     const firstDay = new Date();
@@ -40,8 +46,8 @@ function JobForm() {
   useEffect(() => {
     if (!jobUrl) return;
 
+    // TODO: fetching could be optimized here. Instead of doing two fetch's it could be one
     const fetchJobTitle = async () => {
-      setJobTitle("Fetching title...");
       setCompany("Fetching company...")
 
       try {
@@ -59,7 +65,10 @@ function JobForm() {
         console.error("❌ Failed to fetch job title:", err);
         setJobTitle("Failed to fetch");
       }
+    };
 
+    const fetchCompanyTitle = async () => {
+      setCompany("Fetching company...")
       try {
         const res = await fetch(
           `http://localhost:3000/get-company?url=${encodeURIComponent(jobUrl)}`
@@ -78,7 +87,12 @@ function JobForm() {
 
     };
 
-    fetchJobTitle();
+    if (!jobTitle) {
+      fetchJobTitle();
+    }
+    if (!company) {
+      fetchCompanyTitle();
+    }
   }, [jobUrl]);
 
   const handleSubmit = async (e) => {
@@ -129,6 +143,28 @@ function JobForm() {
       <img src={sleepyku} alt="Artwork" style={{ width: "450px", height: "auto" }} />
 
       <h3 className="mb-4 text-center">Save Applied Jobs</h3>
+
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center', // 👈 aligns vertically
+          gap: '10px', // 👈 space between text and button
+          marginBottom: '20px',
+        }}
+      >
+        <button onClick={clearText} style={{
+          padding: '10px',
+          backgroundColor: 'gray',
+          color: 'white',
+          border: 'none',
+          borderRadius: '20px',
+          cursor: 'pointer',
+          fontWeight: 'bold'
+        }}>
+          {'CLEAR TEXT'}
+        </button>
+      </div>
 
       <Form onSubmit={handleSubmit}>
         <Form.Group as={Row} className="mb-3" controlId="formJobUrl">
