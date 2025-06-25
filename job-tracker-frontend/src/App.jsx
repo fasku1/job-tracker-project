@@ -139,8 +139,8 @@ function JobForm() {
 
 
   return (
-    <Container className="my-5">
-      <img src={sleepyku} alt="Artwork" style={{ width: "450px", height: "auto" }} />
+    <Container>
+      <img src={sleepyku} alt="Artwork" style={{ width: "400px", height: "auto" }} />
 
       <h3 className="mb-4 text-center">Save Applied Jobs</h3>
 
