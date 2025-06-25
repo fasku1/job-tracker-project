@@ -232,7 +232,7 @@ function JobForm() {
         >
           <span style={{ margin: 0, fontSize: '16px' }}>Login Required?</span>
 
-          <button onClick={handleLogin} style={{
+          <button onClick={handleLogin} type="button" style={{
             padding: '10px',
             backgroundColor: login ? 'limegreen' : 'lightgray',
             color: 'white',
@@ -256,7 +256,7 @@ function JobForm() {
         >
           <span style={{ margin: 0, fontSize: '16px' }}>Desired/Favorite Job?</span>
 
-          <button onClick={handleFavorite} style={{
+          <button onClick={handleFavorite} type="button" style={{
             padding: '10px',
             backgroundColor: favoriteJob ? 'limegreen' : 'lightgray',
             color: 'white',

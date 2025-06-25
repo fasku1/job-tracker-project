@@ -1451,3 +1451,8 @@ Error in /get-company: TypeError: Invalid URL
   input: 'test'
 }
 Parsed hostname: www.linkedin.com
+Parsed hostname: wisc.joinhandshake.com
+Parsed hostname: wisc.joinhandshake.com
+Parsed hostname: wisc.joinhandshake.com
+Parsed hostname: wisc.joinhandshake.com
+Parsed hostname: wisc.joinhandshake.com
