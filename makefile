@@ -28,6 +28,12 @@ run:
 	@echo "🌐 Starting frontend..."
 	cd $(FRONTEND_DIR) && npm install && npm run dev
 
+# Run both backend and frontend in foreground with backend logs visible live
+run-foreground:
+	@echo "🚀 Starting backend and frontend together (both logs visible)..."
+	cd $(BACKEND_DIR) && npm install && node index.js & \
+	cd $(FRONTEND_DIR) && npm install && npm run dev
+
 # View backend logs (real-time)
 logs:
 	tail -f backend.log
@@ -38,4 +44,4 @@ stop:
 	pkill -f "node index.js" || true
 	pkill -f "nodemon index.js" || true
 
-.PHONY: install backend backend-dev frontend run logs stop
+.PHONY: install backend backend-dev frontend run run-foreground logs stop

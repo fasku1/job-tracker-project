@@ -5,6 +5,9 @@ const { google } = require("googleapis");
 const axios = require("axios");
 const cheerio = require("cheerio");
 
+const linkedin = "linkedin.com";
+
+
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -47,15 +50,20 @@ app.get("/get-job-title", async (req, res) => {
   try {
     const { data } = await axios.get(url);
     const $ = cheerio.load(data);
+    let title = "";
 
-    // Try multiple selectors in order
-    let title =
-      $("h1").first().text() ||
-      $('meta[property="og:title"]').attr("content") ||
-      $("title").text() ||
-      "Unknown Title";
+    if (url.includes(linkedin)) {
+      title = $("h1").first().text();
+    } else {
+      title =
+        $("h1").first().text() ||
+        $('meta[property="og:title"]').attr("content") ||
+        $("title").text() ||
+        "Unknown Title";
+    }
 
     res.json({ title: title.trim() });
+
   } catch (err) {
     console.error("Error fetching job title:", err);
     res.status(500).json({ error: "❌ Could not fetch title" });
@@ -65,30 +73,57 @@ app.get("/get-job-title", async (req, res) => {
 // ✅ Route 3: Auto-fetch company from a URL
 app.get("/get-company", async (req, res) => {
   try {
-    const jobUrl = req.query.url;
 
-    if (!jobUrl) {
-      return res.status(400).json({ error: "Missing URL parameter" });
+    const { url } = req.query;
+
+    let company = "";
+
+    if (url.includes("linkedin.com")) {
+      try {
+        const { data } = await axios.get(url);
+        console.log(data.slice(0, 1000)); // Show the first 1000 characters of the HTML
+        const $ = cheerio.load(data);
+
+        const raw = $('a.topcard__org-name-link.topcard__flavor--black-link').first().text().trim();
+        company = raw || "didn't work";
+      } catch (err) {
+        console.error("Error in /get-company:", err);
+        return res.status(500).json({ error: "Internal Server Error" });
+      }
     }
+    else {
+      company = "NA";
+      // const { url } = req.query;
 
-    const hostname = new URL(jobUrl).hostname;
-    console.log("Parsed hostname:", hostname);
 
-    // Split the domain
-    const parts = hostname.split(".").filter(Boolean);
 
-    // Common subdomains to ignore
-    const ignore = ["www", "jobs", "careers"];
+      // if (!jobUrl) {
+      //   return res.status(400).json({ error: "Missing URL parameter" });
+      // }
 
-    // Remove ignored subdomains
-    const filtered = parts.filter(p => !ignore.includes(p.toLowerCase()));
+      // if (jobUrl.includes(linkedin)) {
 
-    let company = "unknown";
+      // }
 
-    if (filtered.length >= 2) {
-      company = filtered[filtered.length - 2]; // get second-to-last part, e.g. fetchrewards from fetchrewards.com
-    } else if (filtered.length === 1) {
-      company = filtered[0];
+      // const hostname = new URL(jobUrl).hostname;
+      // console.log("Parsed hostname:", hostname);
+
+      // // Split the domain
+      // const parts = hostname.split(".").filter(Boolean);
+
+      // // Common subdomains to ignore
+      // const ignore = ["www", "jobs", "careers"];
+
+      // // Remove ignored subdomains
+      // const filtered = parts.filter(p => !ignore.includes(p.toLowerCase()));
+
+      // let company = "unknown";
+
+      // if (filtered.length >= 2) {
+      //   company = filtered[filtered.length - 2]; // get second-to-last part, e.g. fetchrewards from fetchrewards.com
+      // } else if (filtered.length === 1) {
+      //   company = filtered[0];
+      // }
     }
 
     return res.json({ company });
