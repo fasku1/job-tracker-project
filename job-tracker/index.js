@@ -92,46 +92,33 @@ app.get("/get-company", async (req, res) => {
       }
     }
     else {
-      company = "NA";
-      // const { url } = req.query;
+      let hostname;
+      try {
+        hostname = new URL(url).hostname;
+      } catch (error) {
+        console.error("Error parsing URL:", error.message);
+        return res.status(400).json({ error: "Invalid URL" });
+      }
 
+      const parts = hostname.split(".").filter(Boolean);
+      const ignore = ["www", "jobs", "careers"];
+      const filtered = parts.filter(p => !ignore.includes(p.toLowerCase()));
 
-
-      // if (!jobUrl) {
-      //   return res.status(400).json({ error: "Missing URL parameter" });
-      // }
-
-      // if (jobUrl.includes(linkedin)) {
-
-      // }
-
-      // const hostname = new URL(jobUrl).hostname;
-      // console.log("Parsed hostname:", hostname);
-
-      // // Split the domain
-      // const parts = hostname.split(".").filter(Boolean);
-
-      // // Common subdomains to ignore
-      // const ignore = ["www", "jobs", "careers"];
-
-      // // Remove ignored subdomains
-      // const filtered = parts.filter(p => !ignore.includes(p.toLowerCase()));
-
-      // let company = "unknown";
-
-      // if (filtered.length >= 2) {
-      //   company = filtered[filtered.length - 2]; // get second-to-last part, e.g. fetchrewards from fetchrewards.com
-      // } else if (filtered.length === 1) {
-      //   company = filtered[0];
-      // }
+      if (filtered.length >= 2) {
+        company = filtered[filtered.length - 2];
+      } else if (filtered.length === 1) {
+        company = filtered[0];
+      } else {
+        company = "unknown";
+      }
     }
 
-    return res.json({ company });
-  } catch (err) {
-    console.error("Error in /get-company:", err);
-    return res.status(500).json({ error: "Internal Server Error" });
-  }
-});
+      return res.json({ company });
+    } catch (err) {
+      console.error("Error in /get-company:", err);
+      return res.status(500).json({ error: "Internal Server Error" });
+    }
+  });
 
 
 
