@@ -1,0 +1,4 @@
+# .gitignore
+cred.env
+aerial-bonfire-457101-p0-a57e3e4ee10b.json
+.DS_Store
