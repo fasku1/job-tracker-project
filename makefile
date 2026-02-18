@@ -1,7 +1,7 @@
 # Root Makefile
 
-BACKEND_DIR=job-tracker
-FRONTEND_DIR=job-tracker-frontend
+BACKEND_DIR=nodejs-backend
+FRONTEND_DIR=react-frontend
 
 # Install dependencies
 install:
