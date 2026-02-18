@@ -1,167 +1,856 @@
 🚀 Backend running on http://localhost:3000
-<!DOCTYPE html>
-
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-
-    
-    
-    
-    
-
-    
-    <html lang="en">
-      <head>
-        <meta name="pageKey" content="d_jobs_guest_search">
-<!----><!---->          <meta name="linkedin:pageTag" content="urlType=jserp_canonical_other;emptyResult=false">
-        <meta name="locale" content="en_US">
-        <meta id="config" data-app-version="2.0.2480" data-call-tree-id="AAY8GNfOy5rLh9wdJr3i4Q==" data-multiproduct-name="jobs-guest-frontend" data-service-name="jobs-guest-frontend" data-browser-id="0474a5d7-6ed6-456e-86d1-33ce104f3312" data-enable-page-view-heartbeat-tracking data-page-instance="urn:li:page:d_jobs_guest_search;OLqcRCLGQ/a3E/1cZ+K9eQ==" data-disable-jsbeacon-pagekey-suffix="false" data-member-id="0" data-should-use-full-url-in-pve-path="true" data-dna-member-lix-treatment="enabled" data-human-member-lix-treatment="enabled" data-dfp-member-lix-treatment="control" data-sync-apfc-headers-lix-treatment="control" data-sync-apfc-cb-
-<!DOCTYPE html>
-
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-
-    
-    
-    
-    
-
-    
-    <html lang="en">
-      <head>
-        <meta name="pageKey" content="d_jobs_guest_search">
-<!----><!---->          <meta name="linkedin:pageTag" content="urlType=jserp_canonical_other;emptyResult=false">
-        <meta name="locale" content="en_US">
-        <meta id="config" data-app-version="2.0.2480" data-call-tree-id="AAY8GNnTJWSsEvb4/SvJng==" data-multiproduct-name="jobs-guest-frontend" data-service-name="jobs-guest-frontend" data-browser-id="8b8a0609-d007-49ee-8e28-90b2a5dab621" data-enable-page-view-heartbeat-tracking data-page-instance="urn:li:page:d_jobs_guest_search;9Tfzs6E7Rv+hKtzdORRBBw==" data-disable-jsbeacon-pagekey-suffix="false" data-member-id="0" data-should-use-full-url-in-pve-path="true" data-dna-member-lix-treatment="enabled" data-human-member-lix-treatment="enabled" data-dfp-member-lix-treatment="control" data-sync-apfc-headers-lix-treatment="control" data-sync-apfc-cb-
-<!DOCTYPE html>
-
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-
-    
-    
-    
-    
-
-    
-    <html lang="en">
-      <head>
-        <meta name="pageKey" content="d_jobs_guest_search">
-<!----><!---->          <meta name="linkedin:pageTag" content="urlType=jserp_canonical_other;emptyResult=false">
-        <meta name="locale" content="en_US">
-        <meta id="config" data-app-version="2.0.2480" data-call-tree-id="AAY8GNnuMgr4jJQjTkadSg==" data-multiproduct-name="jobs-guest-frontend" data-service-name="jobs-guest-frontend" data-browser-id="041105c5-7951-4685-8c0c-9d7e4a43a4a6" data-enable-page-view-heartbeat-tracking data-page-instance="urn:li:page:d_jobs_guest_search;c/ipC9JnSLiPcmosL9ussA==" data-disable-jsbeacon-pagekey-suffix="false" data-member-id="0" data-should-use-full-url-in-pve-path="true" data-dna-member-lix-treatment="enabled" data-human-member-lix-treatment="enabled" data-dfp-member-lix-treatment="control" data-sync-apfc-headers-lix-treatment="control" data-sync-apfc-cb-
-<!DOCTYPE html>
-
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-
-    
-    
-    
-    
-
-    
-    <html lang="en">
-      <head>
-        <meta name="pageKey" content="d_jobs_guest_search">
-<!----><!---->          <meta name="linkedin:pageTag" content="urlType=jserp_canonical_other;emptyResult=false">
-        <meta name="locale" content="en_US">
-        <meta id="config" data-app-version="2.0.2480" data-call-tree-id="AAY8GO8eYou9221ZYUV5zw==" data-multiproduct-name="jobs-guest-frontend" data-service-name="jobs-guest-frontend" data-browser-id="f35ea5f5-52a6-444c-88f7-b6dc2106d988" data-enable-page-view-heartbeat-tracking data-page-instance="urn:li:page:d_jobs_guest_search;CwVwQqTbQCGD/cEV3gHMeg==" data-disable-jsbeacon-pagekey-suffix="false" data-member-id="0" data-should-use-full-url-in-pve-path="true" data-dna-member-lix-treatment="enabled" data-human-member-lix-treatment="control" data-dfp-member-lix-treatment="control" data-sync-apfc-headers-lix-treatment="control" data-sync-apfc-cb-
-<!DOCTYPE html>
-
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-
-    
-    
-    
-    
-
-    
-    <html lang="en">
-      <head>
-        <meta name="pageKey" content="d_jobs_guest_search">
-<!----><!---->          <meta name="linkedin:pageTag" content="urlType=jserp_canonical_other;emptyResult=false">
-        <meta name="locale" content="en_US">
-        <meta id="config" data-app-version="2.0.2480" data-call-tree-id="AAY8GO82S1wGlSkkCOijsQ==" data-multiproduct-name="jobs-guest-frontend" data-service-name="jobs-guest-frontend" data-browser-id="f8a15fff-0794-436c-81af-fde799b4f5f1" data-enable-page-view-heartbeat-tracking data-page-instance="urn:li:page:d_jobs_guest_search;ONXYLp5NSuyz02PCg4LNKA==" data-disable-jsbeacon-pagekey-suffix="false" data-member-id="0" data-should-use-full-url-in-pve-path="true" data-dna-member-lix-treatment="enabled" data-human-member-lix-treatment="control" data-dfp-member-lix-treatment="control" data-sync-apfc-headers-lix-treatment="control" data-sync-apfc-cb-
 Error fetching job title: TypeError: Invalid URL
     at new URL (node:internal/url:818:25)
-    at dispatchHttpRequest (/Users/ethanyang/Desktop/Projects/job-tracker-project/job-tracker/node_modules/axios/dist/node/axios.cjs:2783:20)
-    at /Users/ethanyang/Desktop/Projects/job-tracker-project/job-tracker/node_modules/axios/dist/node/axios.cjs:2703:5
+    at dispatchHttpRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2783:20)
+    at /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2703:5
     at new Promise (<anonymous>)
-    at wrapAsync (/Users/ethanyang/Desktop/Projects/job-tracker-project/job-tracker/node_modules/axios/dist/node/axios.cjs:2683:10)
-    at http (/Users/ethanyang/Desktop/Projects/job-tracker-project/job-tracker/node_modules/axios/dist/node/axios.cjs:2721:10)
-    at Axios.dispatchRequest (/Users/ethanyang/Desktop/Projects/job-tracker-project/job-tracker/node_modules/axios/dist/node/axios.cjs:4098:10)
-    at Axios._request (/Users/ethanyang/Desktop/Projects/job-tracker-project/job-tracker/node_modules/axios/dist/node/axios.cjs:4398:33)
-    at Axios.request (/Users/ethanyang/Desktop/Projects/job-tracker-project/job-tracker/node_modules/axios/dist/node/axios.cjs:4253:25)
-    at Axios.<computed> [as get] (/Users/ethanyang/Desktop/Projects/job-tracker-project/job-tracker/node_modules/axios/dist/node/axios.cjs:4424:17)
-    at Axios.request (/Users/ethanyang/Desktop/Projects/job-tracker-project/job-tracker/node_modules/axios/dist/node/axios.cjs:4258:41)
+    at wrapAsync (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2683:10)
+    at http (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2721:10)
+    at Axios.dispatchRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4098:10)
+    at Axios._request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4398:33)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4253:25)
+    at Axios.<computed> [as get] (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4424:17)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4258:41)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at async /Users/ethanyang/Desktop/Projects/job-tracker-project/job-tracker/index.js:51:22 {
+    at async /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/index.js:51:22 {
   code: 'ERR_INVALID_URL',
-  input: 'f'
+  input: 't'
 }
 Error parsing URL: Invalid URL
 Error fetching job title: TypeError: Invalid URL
     at new URL (node:internal/url:818:25)
-    at dispatchHttpRequest (/Users/ethanyang/Desktop/Projects/job-tracker-project/job-tracker/node_modules/axios/dist/node/axios.cjs:2783:20)
-    at /Users/ethanyang/Desktop/Projects/job-tracker-project/job-tracker/node_modules/axios/dist/node/axios.cjs:2703:5
+    at dispatchHttpRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2783:20)
+    at /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2703:5
     at new Promise (<anonymous>)
-    at wrapAsync (/Users/ethanyang/Desktop/Projects/job-tracker-project/job-tracker/node_modules/axios/dist/node/axios.cjs:2683:10)
-    at http (/Users/ethanyang/Desktop/Projects/job-tracker-project/job-tracker/node_modules/axios/dist/node/axios.cjs:2721:10)
-    at Axios.dispatchRequest (/Users/ethanyang/Desktop/Projects/job-tracker-project/job-tracker/node_modules/axios/dist/node/axios.cjs:4098:10)
-    at Axios._request (/Users/ethanyang/Desktop/Projects/job-tracker-project/job-tracker/node_modules/axios/dist/node/axios.cjs:4398:33)
-    at Axios.request (/Users/ethanyang/Desktop/Projects/job-tracker-project/job-tracker/node_modules/axios/dist/node/axios.cjs:4253:25)
-    at Axios.<computed> [as get] (/Users/ethanyang/Desktop/Projects/job-tracker-project/job-tracker/node_modules/axios/dist/node/axios.cjs:4424:17)
-    at Axios.request (/Users/ethanyang/Desktop/Projects/job-tracker-project/job-tracker/node_modules/axios/dist/node/axios.cjs:4258:41)
+    at wrapAsync (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2683:10)
+    at http (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2721:10)
+    at Axios.dispatchRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4098:10)
+    at Axios._request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4398:33)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4253:25)
+    at Axios.<computed> [as get] (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4424:17)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4258:41)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at async /Users/ethanyang/Desktop/Projects/job-tracker-project/job-tracker/index.js:51:22 {
+    at async /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/index.js:51:22 {
   code: 'ERR_INVALID_URL',
-  input: 'fe'
+  input: 'te'
 }
 Error parsing URL: Invalid URL
+Error fetching job title: TypeError: Invalid URL
+    at new URL (node:internal/url:818:25)
+    at dispatchHttpRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2783:20)
+    at /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2703:5
+    at new Promise (<anonymous>)
+    at wrapAsync (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2683:10)
+    at http (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2721:10)
+    at Axios.dispatchRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4098:10)
+    at Axios._request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4398:33)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4253:25)
+    at Axios.<computed> [as get] (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4424:17)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4258:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/index.js:51:22 {
+  code: 'ERR_INVALID_URL',
+  input: 'tes'
+}
+Error parsing URL: Invalid URL
+Error fetching job title: TypeError: Invalid URL
+    at new URL (node:internal/url:818:25)
+    at dispatchHttpRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2783:20)
+    at /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2703:5
+    at new Promise (<anonymous>)
+    at wrapAsync (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2683:10)
+    at http (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2721:10)
+    at Axios.dispatchRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4098:10)
+    at Axios._request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4398:33)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4253:25)
+    at Axios.<computed> [as get] (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4424:17)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4258:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/index.js:51:22 {
+  code: 'ERR_INVALID_URL',
+  input: 'test'
+}
+Error parsing URL: Invalid URL
+Error fetching job title: TypeError: Invalid URL
+    at new URL (node:internal/url:818:25)
+    at dispatchHttpRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2783:20)
+    at /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2703:5
+    at new Promise (<anonymous>)
+    at wrapAsync (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2683:10)
+    at http (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2721:10)
+    at Axios.dispatchRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4098:10)
+    at Axios._request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4398:33)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4253:25)
+    at Axios.<computed> [as get] (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4424:17)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4258:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/index.js:51:22 {
+  code: 'ERR_INVALID_URL',
+  input: 'test.'
+}
+Error parsing URL: Invalid URL
+Error fetching job title: TypeError: Invalid URL
+    at new URL (node:internal/url:818:25)
+    at dispatchHttpRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2783:20)
+    at /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2703:5
+    at new Promise (<anonymous>)
+    at wrapAsync (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2683:10)
+    at http (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2721:10)
+    at Axios.dispatchRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4098:10)
+    at Axios._request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4398:33)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4253:25)
+    at Axios.<computed> [as get] (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4424:17)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4258:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/index.js:51:22 {
+  code: 'ERR_INVALID_URL',
+  input: 'test.c'
+}
+Error parsing URL: Invalid URL
+Error fetching job title: TypeError: Invalid URL
+    at new URL (node:internal/url:818:25)
+    at dispatchHttpRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2783:20)
+    at /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2703:5
+    at new Promise (<anonymous>)
+    at wrapAsync (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2683:10)
+    at http (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2721:10)
+    at Axios.dispatchRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4098:10)
+    at Axios._request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4398:33)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4253:25)
+    at Axios.<computed> [as get] (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4424:17)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4258:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/index.js:51:22 {
+  code: 'ERR_INVALID_URL',
+  input: 'test.co'
+}
+Error parsing URL: Invalid URL
+Error fetching job title: TypeError: Invalid URL
+    at new URL (node:internal/url:818:25)
+    at dispatchHttpRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2783:20)
+    at /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2703:5
+    at new Promise (<anonymous>)
+    at wrapAsync (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2683:10)
+    at http (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2721:10)
+    at Axios.dispatchRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4098:10)
+    at Axios._request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4398:33)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4253:25)
+    at Axios.<computed> [as get] (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4424:17)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4258:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/index.js:51:22 {
+  code: 'ERR_INVALID_URL',
+  input: 'test.com'
+}
+Error parsing URL: Invalid URL
+Error fetching job title: TypeError: Invalid URL
+    at new URL (node:internal/url:818:25)
+    at dispatchHttpRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2783:20)
+    at /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2703:5
+    at new Promise (<anonymous>)
+    at wrapAsync (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2683:10)
+    at http (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2721:10)
+    at Axios.dispatchRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4098:10)
+    at Axios._request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4398:33)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4253:25)
+    at Axios.<computed> [as get] (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4424:17)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4258:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/index.js:51:22 {
+  code: 'ERR_INVALID_URL',
+  input: 'htest.com'
+}
+Error parsing URL: Invalid URL
+Error fetching job title: TypeError: Invalid URL
+    at new URL (node:internal/url:818:25)
+    at dispatchHttpRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2783:20)
+    at /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2703:5
+    at new Promise (<anonymous>)
+    at wrapAsync (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2683:10)
+    at http (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2721:10)
+    at Axios.dispatchRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4098:10)
+    at Axios._request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4398:33)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4253:25)
+    at Axios.<computed> [as get] (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4424:17)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4258:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/index.js:51:22 {
+  code: 'ERR_INVALID_URL',
+  input: 'hhtest.com'
+}
+Error parsing URL: Invalid URL
+Error fetching job title: TypeError: Invalid URL
+    at new URL (node:internal/url:818:25)
+    at dispatchHttpRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2783:20)
+    at /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2703:5
+    at new Promise (<anonymous>)
+    at wrapAsync (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2683:10)
+    at http (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2721:10)
+    at Axios.dispatchRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4098:10)
+    at Axios._request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4398:33)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4253:25)
+    at Axios.<computed> [as get] (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4424:17)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4258:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/index.js:51:22 {
+  code: 'ERR_INVALID_URL',
+  input: 'hhttest.com'
+}
+Error parsing URL: Invalid URL
+Error fetching job title: TypeError: Invalid URL
+    at new URL (node:internal/url:818:25)
+    at dispatchHttpRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2783:20)
+    at /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2703:5
+    at new Promise (<anonymous>)
+    at wrapAsync (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2683:10)
+    at http (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2721:10)
+    at Axios.dispatchRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4098:10)
+    at Axios._request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4398:33)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4253:25)
+    at Axios.<computed> [as get] (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4424:17)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4258:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/index.js:51:22 {
+  code: 'ERR_INVALID_URL',
+  input: 'hhtstest.com'
+}
+Error parsing URL: Invalid URL
+Error fetching job title: TypeError: Invalid URL
+    at new URL (node:internal/url:818:25)
+    at dispatchHttpRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2783:20)
+    at /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2703:5
+    at new Promise (<anonymous>)
+    at wrapAsync (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2683:10)
+    at http (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2721:10)
+    at Axios.dispatchRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4098:10)
+    at Axios._request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4398:33)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4253:25)
+    at Axios.<computed> [as get] (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4424:17)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4258:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/index.js:51:22 {
+  code: 'ERR_INVALID_URL',
+  input: 'hhttest.com'
+}
+Error parsing URL: Invalid URL
+Error fetching job title: TypeError: Invalid URL
+    at new URL (node:internal/url:818:25)
+    at dispatchHttpRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2783:20)
+    at /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2703:5
+    at new Promise (<anonymous>)
+    at wrapAsync (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2683:10)
+    at http (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2721:10)
+    at Axios.dispatchRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4098:10)
+    at Axios._request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4398:33)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4253:25)
+    at Axios.<computed> [as get] (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4424:17)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4258:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/index.js:51:22 {
+  code: 'ERR_INVALID_URL',
+  input: 'hhtest.com'
+}
+Error parsing URL: Invalid URL
+Error fetching job title: TypeError: Invalid URL
+    at new URL (node:internal/url:818:25)
+    at dispatchHttpRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2783:20)
+    at /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2703:5
+    at new Promise (<anonymous>)
+    at wrapAsync (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2683:10)
+    at http (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2721:10)
+    at Axios.dispatchRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4098:10)
+    at Axios._request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4398:33)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4253:25)
+    at Axios.<computed> [as get] (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4424:17)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4258:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/index.js:51:22 {
+  code: 'ERR_INVALID_URL',
+  input: 'htest.com'
+}
+Error parsing URL: Invalid URL
+Error fetching job title: TypeError: Invalid URL
+    at new URL (node:internal/url:818:25)
+    at dispatchHttpRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2783:20)
+    at /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2703:5
+    at new Promise (<anonymous>)
+    at wrapAsync (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2683:10)
+    at http (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2721:10)
+    at Axios.dispatchRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4098:10)
+    at Axios._request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4398:33)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4253:25)
+    at Axios.<computed> [as get] (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4424:17)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4258:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/index.js:51:22 {
+  code: 'ERR_INVALID_URL',
+  input: 'httest.com'
+}
+Error parsing URL: Invalid URL
+Error fetching job title: TypeError: Invalid URL
+    at new URL (node:internal/url:818:25)
+    at dispatchHttpRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2783:20)
+    at /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2703:5
+    at new Promise (<anonymous>)
+    at wrapAsync (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2683:10)
+    at http (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2721:10)
+    at Axios.dispatchRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4098:10)
+    at Axios._request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4398:33)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4253:25)
+    at Axios.<computed> [as get] (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4424:17)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4258:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/index.js:51:22 {
+  code: 'ERR_INVALID_URL',
+  input: 'htttest.com'
+}
+Error parsing URL: Invalid URL
+Error fetching job title: TypeError: Invalid URL
+    at new URL (node:internal/url:818:25)
+    at dispatchHttpRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2783:20)
+    at /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2703:5
+    at new Promise (<anonymous>)
+    at wrapAsync (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2683:10)
+    at http (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2721:10)
+    at Axios.dispatchRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4098:10)
+    at Axios._request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4398:33)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4253:25)
+    at Axios.<computed> [as get] (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4424:17)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4258:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/index.js:51:22 {
+  code: 'ERR_INVALID_URL',
+  input: 'httptest.com'
+}
+Error parsing URL: Invalid URL
+Error fetching job title: TypeError: Invalid URL
+    at new URL (node:internal/url:818:25)
+    at dispatchHttpRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2783:20)
+    at /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2703:5
+    at new Promise (<anonymous>)
+    at wrapAsync (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2683:10)
+    at http (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:2721:10)
+    at Axios.dispatchRequest (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4098:10)
+    at Axios._request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4398:33)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4253:25)
+    at Axios.<computed> [as get] (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4424:17)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4258:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/index.js:51:22 {
+  code: 'ERR_INVALID_URL',
+  input: 'httpstest.com'
+}
+Error parsing URL: Invalid URL
+Error fetching job title: AxiosError: getaddrinfo ENOTFOUND test.com
+    at AxiosError.from (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:857:14)
+    at RedirectableRequest.handleRequestError (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:3169:25)
+    at RedirectableRequest.emit (node:events:507:28)
+    at eventHandlers.<computed> (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/follow-redirects/index.js:49:24)
+    at ClientRequest.emit (node:events:507:28)
+    at emitErrorEvent (node:_http_client:104:11)
+    at TLSSocket.socketErrorListener (node:_http_client:518:5)
+    at TLSSocket.emit (node:events:507:28)
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4258:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/index.js:51:22 {
+  hostname: 'test.com',
+  syscall: 'getaddrinfo',
+  code: 'ENOTFOUND',
+  errno: -3008,
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function [FormData]], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': undefined,
+      'User-Agent': 'axios/1.8.4',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'get',
+    url: 'https:test.com',
+    allowAbsoluteUrls: true,
+    data: undefined
+  },
+  request: <ref *1> Writable {
+    _events: {
+      close: undefined,
+      error: [Function: handleRequestError],
+      prefinish: undefined,
+      finish: undefined,
+      drain: undefined,
+      response: [Function: handleResponse],
+      socket: [Function: handleRequestSocket]
+    },
+    _writableState: WritableState {
+      highWaterMark: 65536,
+      length: 0,
+      corked: 0,
+      onwrite: [Function: bound onwrite],
+      writelen: 0,
+      bufferedIndex: 0,
+      pendingcb: 0,
+      [Symbol(kState)]: 17580812,
+      [Symbol(kBufferedValue)]: null
+    },
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: Infinity,
+      protocol: 'https:',
+      path: '/',
+      method: 'GET',
+      headers: [Object: null prototype],
+      agents: [Object],
+      auth: undefined,
+      family: undefined,
+      beforeRedirect: [Function: dispatchBeforeRedirect],
+      beforeRedirects: [Object],
+      hostname: 'test.com',
+      port: '',
+      agent: undefined,
+      nativeProtocols: [Object],
+      pathname: '/'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 0,
+    _requestBodyBuffers: [],
+    _eventsCount: 3,
+    _onNativeResponse: [Function (anonymous)],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'GET / HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/1.8.4\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: test.com\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: [Function: emitRequestTimeout],
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'test.com',
+      protocol: 'https:',
+      _redirectable: [Circular *1],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [TLSSocket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 65536,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    _currentUrl: 'https://test.com/',
+    [Symbol(shapeMode)]: true,
+    [Symbol(kCapture)]: false
+  },
+  cause: Error: getaddrinfo ENOTFOUND test.com
+      at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'test.com'
+  }
+}
+Error fetching job title: AxiosError: getaddrinfo ENOTFOUND test.com
+    at AxiosError.from (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:857:14)
+    at RedirectableRequest.handleRequestError (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:3169:25)
+    at RedirectableRequest.emit (node:events:507:28)
+    at eventHandlers.<computed> (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/follow-redirects/index.js:49:24)
+    at ClientRequest.emit (node:events:507:28)
+    at emitErrorEvent (node:_http_client:104:11)
+    at TLSSocket.socketErrorListener (node:_http_client:518:5)
+    at TLSSocket.emit (node:events:507:28)
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4258:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/index.js:51:22 {
+  hostname: 'test.com',
+  syscall: 'getaddrinfo',
+  code: 'ENOTFOUND',
+  errno: -3008,
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function [FormData]], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': undefined,
+      'User-Agent': 'axios/1.8.4',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'get',
+    url: 'https:/test.com',
+    allowAbsoluteUrls: true,
+    data: undefined
+  },
+  request: <ref *1> Writable {
+    _events: {
+      close: undefined,
+      error: [Function: handleRequestError],
+      prefinish: undefined,
+      finish: undefined,
+      drain: undefined,
+      response: [Function: handleResponse],
+      socket: [Function: handleRequestSocket]
+    },
+    _writableState: WritableState {
+      highWaterMark: 65536,
+      length: 0,
+      corked: 0,
+      onwrite: [Function: bound onwrite],
+      writelen: 0,
+      bufferedIndex: 0,
+      pendingcb: 0,
+      [Symbol(kState)]: 17580812,
+      [Symbol(kBufferedValue)]: null
+    },
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: Infinity,
+      protocol: 'https:',
+      path: '/',
+      method: 'GET',
+      headers: [Object: null prototype],
+      agents: [Object],
+      auth: undefined,
+      family: undefined,
+      beforeRedirect: [Function: dispatchBeforeRedirect],
+      beforeRedirects: [Object],
+      hostname: 'test.com',
+      port: '',
+      agent: undefined,
+      nativeProtocols: [Object],
+      pathname: '/'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 0,
+    _requestBodyBuffers: [],
+    _eventsCount: 3,
+    _onNativeResponse: [Function (anonymous)],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'GET / HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/1.8.4\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: test.com\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: [Function: emitRequestTimeout],
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'test.com',
+      protocol: 'https:',
+      _redirectable: [Circular *1],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [TLSSocket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 65536,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    _currentUrl: 'https://test.com/',
+    [Symbol(shapeMode)]: true,
+    [Symbol(kCapture)]: false
+  },
+  cause: Error: getaddrinfo ENOTFOUND test.com
+      at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'test.com'
+  }
+}
+Error fetching job title: AxiosError: getaddrinfo ENOTFOUND test.com
+    at AxiosError.from (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:857:14)
+    at RedirectableRequest.handleRequestError (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:3169:25)
+    at RedirectableRequest.emit (node:events:507:28)
+    at eventHandlers.<computed> (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/follow-redirects/index.js:49:24)
+    at ClientRequest.emit (node:events:507:28)
+    at emitErrorEvent (node:_http_client:104:11)
+    at TLSSocket.socketErrorListener (node:_http_client:518:5)
+    at TLSSocket.emit (node:events:507:28)
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at Axios.request (/Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/node_modules/axios/dist/node/axios.cjs:4258:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/ethanyang/Desktop/job-tracker-project/nodejs-backend/index.js:51:22 {
+  hostname: 'test.com',
+  syscall: 'getaddrinfo',
+  code: 'ENOTFOUND',
+  errno: -3008,
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function [FormData]], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': undefined,
+      'User-Agent': 'axios/1.8.4',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'get',
+    url: 'https://test.com',
+    allowAbsoluteUrls: true,
+    data: undefined
+  },
+  request: <ref *1> Writable {
+    _events: {
+      close: undefined,
+      error: [Function: handleRequestError],
+      prefinish: undefined,
+      finish: undefined,
+      drain: undefined,
+      response: [Function: handleResponse],
+      socket: [Function: handleRequestSocket]
+    },
+    _writableState: WritableState {
+      highWaterMark: 65536,
+      length: 0,
+      corked: 0,
+      onwrite: [Function: bound onwrite],
+      writelen: 0,
+      bufferedIndex: 0,
+      pendingcb: 0,
+      [Symbol(kState)]: 17580812,
+      [Symbol(kBufferedValue)]: null
+    },
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: Infinity,
+      protocol: 'https:',
+      path: '/',
+      method: 'GET',
+      headers: [Object: null prototype],
+      agents: [Object],
+      auth: undefined,
+      family: undefined,
+      beforeRedirect: [Function: dispatchBeforeRedirect],
+      beforeRedirects: [Object],
+      hostname: 'test.com',
+      port: '',
+      agent: undefined,
+      nativeProtocols: [Object],
+      pathname: '/'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 0,
+    _requestBodyBuffers: [],
+    _eventsCount: 3,
+    _onNativeResponse: [Function (anonymous)],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'GET / HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/1.8.4\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: test.com\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: [Function: emitRequestTimeout],
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'test.com',
+      protocol: 'https:',
+      _redirectable: [Circular *1],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [TLSSocket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 65536,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    _currentUrl: 'https://test.com/',
+    [Symbol(shapeMode)]: true,
+    [Symbol(kCapture)]: false
+  },
+  cause: Error: getaddrinfo ENOTFOUND test.com
+      at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'test.com'
+  }
+}
