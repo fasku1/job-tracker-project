@@ -1,5 +1,13 @@
 # 📋 Job Application Tracker
 
+## 📸 Screenshots
+
+### Web Interface
+![Dashboard Screenshot](./screenshots/dashboard.png)
+
+### Google Sheets Integration
+![Sheet Screenshot](./screenshots/spreadsheet.png)
+
 A full-stack automation tool designed to streamline the job hunt. This application allows you to manage your job applications through a clean web interface while using **Google Sheets** as a powerful, accessible backend database.
 
 ## 🚀 What it Does
