@@ -10,6 +10,9 @@ import {
 import bounce from '../bounce.gif';
 import sleepyku from '../Untitled_Artwork.png';
 
+// This check is safer for React environments (Vite/CRA)
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+
 function JobForm() {
   const [jobTitle, setJobTitle] = useState("");
   const [company, setCompany] = useState("");
@@ -52,7 +55,7 @@ function JobForm() {
 
       try {
         const res = await fetch(
-          `http://localhost:3000/get-job-title?url=${encodeURIComponent(jobUrl)}`
+          `${API_BASE_URL}/get-job-title?url=${encodeURIComponent(jobUrl)}`
         );
         const data = await res.json();
 
@@ -71,7 +74,7 @@ function JobForm() {
       setCompany("Fetching company...")
       try {
         const res = await fetch(
-          `http://localhost:3000/get-company?url=${encodeURIComponent(jobUrl)}`
+          `${API_BASE_URL}/get-company?url=${encodeURIComponent(jobUrl)}`
         );
         const data = await res.json();
 
@@ -91,131 +94,54 @@ function JobForm() {
     fetchCompanyTitle();
   }, [jobUrl]);
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  try {
-    const res = await fetch("http://localhost:3000/add-job", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ jobTitle, jobUrl, company, dateApplied, favoriteJob }),
-    });
+    try {
+      const res = await fetch(`${API_BASE_URL}/add-job`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ jobTitle, jobUrl, company, dateApplied, favoriteJob }),
+      });
 
-    const data = await res.json();
-    if (res.ok) {
-      setStatus("✅ Job saved!");
-      setJobTitle("");
-      setJobUrl("");
-      setCompany("");
-      setFavoriteJob(false);
-      sessionStorage.removeItem("jobUrl"); // ✅ clear on successful submit
+      const data = await res.json();
+      if (res.ok) {
+        setStatus("✅ Job saved!");
+        setJobTitle("");
+        setJobUrl("");
+        setCompany("");
+        setFavoriteJob(false);
+        sessionStorage.removeItem("jobUrl"); // ✅ clear on successful submit
 
-      // Reset date to first of the month again after submit
-      const today = new Date();
-      const formatted = today.toISOString().split("T")[0];
-      setDateApplied(formatted);
+        // Reset date to first of the month again after submit
+        const today = new Date();
+        const formatted = today.toISOString().split("T")[0];
+        setDateApplied(formatted);
 
-      // Clear status after 3 seconds
-      setTimeout(() => setStatus(""), 3000);
-    } else {
-      setStatus("❌ Error: " + (data.error || "Could not save"));
+        // Clear status after 3 seconds
+        setTimeout(() => setStatus(""), 3000);
+      } else {
+        setStatus("❌ Error: " + (data.error || "Could not save"));
 
-      // Clear error after 5 seconds (optional)
+        // Clear error after 5 seconds (optional)
+        setTimeout(() => setStatus(""), 5000);
+      }
+    } catch (err) {
+      setStatus("❌ Network error");
+
+      // Clear network error after 5 seconds (optional)
       setTimeout(() => setStatus(""), 5000);
     }
-  } catch (err) {
-    setStatus("❌ Network error");
-
-    // Clear network error after 5 seconds (optional)
-    setTimeout(() => setStatus(""), 5000);
-  }
-};
+  };
 
 
-return (
-  <Container>
-    <img src={sleepyku} alt="Artwork" style={{ width: "400px", height: "auto" }} />
+  return (
+    <Container>
+      <img src={sleepyku} alt="Artwork" style={{ width: "400px", height: "auto" }} />
 
-    <h3 className="mb-4 text-center">Save Applied Jobs</h3>
-
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center', // 👈 aligns vertically
-        gap: '10px', // 👈 space between text and button
-        marginBottom: '20px',
-      }}
-    >
-      <button onClick={clearText} style={{
-        padding: '10px',
-        backgroundColor: 'gray',
-        color: 'white',
-        border: 'none',
-        borderRadius: '20px',
-        cursor: 'pointer',
-        fontWeight: 'bold'
-      }}>
-        {'CLEAR TEXT'}
-      </button>
-    </div>
-
-    <Form onSubmit={handleSubmit}>
-      <Form.Group as={Row} className="mb-3" controlId="formJobUrl">
-        <Form.Label column sm={3} style={{ fontWeight: "bold" }}>Job URL</Form.Label>
-        <Col sm={9}>
-          <Form.Control
-            type="url"
-            placeholder="e.g. https://careers.example.com/job123"
-            value={jobUrl}
-            onChange={(e) => {
-              setJobUrl(e.target.value);
-              sessionStorage.setItem("jobUrl", e.target.value); // ✅ store in session
-            }}
-            style={{ fontWeight: "bold" }}
-            required
-          />
-        </Col>
-      </Form.Group>
-
-      <Form.Group as={Row} className="mb-3" controlId="formJobTitle">
-        <Form.Label column sm={3}>Job Title</Form.Label>
-        <Col sm={9}>
-          <Form.Control
-            type="text"
-            placeholder="e.g. Software Engineer"
-            value={jobTitle}
-            onChange={(e) => setJobTitle(e.target.value)}
-            required
-          />
-        </Col>
-      </Form.Group>
-
-      <Form.Group as={Row} className="mb-3" controlId="formJobTitle">
-        <Form.Label column sm={3}>Company</Form.Label>
-        <Col sm={9}>
-          <Form.Control
-            type="text"
-            placeholder="e.g. Google"
-            value={company}
-            onChange={(e) => setCompany(e.target.value)}
-            required
-          />
-        </Col>
-      </Form.Group>
-
-      <Form.Group as={Row} className="mb-4" controlId="formDateApplied">
-        <Form.Label column sm={3}>Date Applied</Form.Label>
-        <Col sm={9}>
-          <Form.Control
-            type="date"
-            value={dateApplied}
-            onChange={(e) => setDateApplied(e.target.value)}
-          />
-        </Col>
-      </Form.Group>
+      <h3 className="mb-4 text-center">Save Applied Jobs</h3>
 
       <div
         style={{
@@ -226,59 +152,136 @@ return (
           marginBottom: '20px',
         }}
       >
-        <span style={{ margin: 0, fontSize: '16px' }}>Login Required?</span>
-
-        <button onClick={handleLogin} type="button" style={{
+        <button onClick={clearText} style={{
           padding: '10px',
-          backgroundColor: login ? 'limegreen' : 'lightgray',
+          backgroundColor: 'gray',
           color: 'white',
           border: 'none',
           borderRadius: '20px',
           cursor: 'pointer',
           fontWeight: 'bold'
         }}>
-          {login ? 'ON' : 'OFF'}
+          {'CLEAR TEXT'}
         </button>
       </div>
 
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center', // 👈 aligns vertically
-          gap: '10px', // 👈 space between text and button
-          marginBottom: '20px',
-        }}
-      >
-        <span style={{ margin: 0, fontSize: '16px' }}>Desired/Favorite Job?</span>
+      <Form onSubmit={handleSubmit}>
+        <Form.Group as={Row} className="mb-3" controlId="formJobUrl">
+          <Form.Label column sm={3} style={{ fontWeight: "bold" }}>Job URL</Form.Label>
+          <Col sm={9}>
+            <Form.Control
+              type="url"
+              placeholder="e.g. https://careers.example.com/job123"
+              value={jobUrl}
+              onChange={(e) => {
+                setJobUrl(e.target.value);
+                sessionStorage.setItem("jobUrl", e.target.value); // ✅ store in session
+              }}
+              style={{ fontWeight: "bold" }}
+              required
+            />
+          </Col>
+        </Form.Group>
 
-        <button onClick={handleFavorite} type="button" style={{
-          padding: '10px',
-          backgroundColor: favoriteJob ? 'limegreen' : 'lightgray',
-          color: 'white',
-          border: 'none',
-          borderRadius: '20px',
-          cursor: 'pointer',
-          fontWeight: 'bold'
-        }}>
-          {favoriteJob ? 'ON' : 'OFF'}
-        </button>
-      </div>
+        <Form.Group as={Row} className="mb-3" controlId="formJobTitle">
+          <Form.Label column sm={3}>Job Title</Form.Label>
+          <Col sm={9}>
+            <Form.Control
+              type="text"
+              placeholder="e.g. Software Engineer"
+              value={jobTitle}
+              onChange={(e) => setJobTitle(e.target.value)}
+              required
+            />
+          </Col>
+        </Form.Group>
 
-      <div className="text-center">
-        <Button variant="primary" type="submit">
-          Submit Application
-        </Button>
-      </div>
+        <Form.Group as={Row} className="mb-3" controlId="formJobTitle">
+          <Form.Label column sm={3}>Company</Form.Label>
+          <Col sm={9}>
+            <Form.Control
+              type="text"
+              placeholder="e.g. Google"
+              value={company}
+              onChange={(e) => setCompany(e.target.value)}
+              required
+            />
+          </Col>
+        </Form.Group>
 
-      {status && (
-        <Alert variant="info" className="mt-4 text-center">
-          {status}
-        </Alert>
-      )}
-    </Form>
-  </Container>
-);
+        <Form.Group as={Row} className="mb-4" controlId="formDateApplied">
+          <Form.Label column sm={3}>Date Applied</Form.Label>
+          <Col sm={9}>
+            <Form.Control
+              type="date"
+              value={dateApplied}
+              onChange={(e) => setDateApplied(e.target.value)}
+            />
+          </Col>
+        </Form.Group>
+
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center', // 👈 aligns vertically
+            gap: '10px', // 👈 space between text and button
+            marginBottom: '20px',
+          }}
+        >
+          <span style={{ margin: 0, fontSize: '16px' }}>Login Required?</span>
+
+          <button onClick={handleLogin} type="button" style={{
+            padding: '10px',
+            backgroundColor: login ? 'limegreen' : 'lightgray',
+            color: 'white',
+            border: 'none',
+            borderRadius: '20px',
+            cursor: 'pointer',
+            fontWeight: 'bold'
+          }}>
+            {login ? 'ON' : 'OFF'}
+          </button>
+        </div>
+
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center', // 👈 aligns vertically
+            gap: '10px', // 👈 space between text and button
+            marginBottom: '20px',
+          }}
+        >
+          <span style={{ margin: 0, fontSize: '16px' }}>Desired/Favorite Job?</span>
+
+          <button onClick={handleFavorite} type="button" style={{
+            padding: '10px',
+            backgroundColor: favoriteJob ? 'limegreen' : 'lightgray',
+            color: 'white',
+            border: 'none',
+            borderRadius: '20px',
+            cursor: 'pointer',
+            fontWeight: 'bold'
+          }}>
+            {favoriteJob ? 'ON' : 'OFF'}
+          </button>
+        </div>
+
+        <div className="text-center">
+          <Button variant="primary" type="submit">
+            Submit Application
+          </Button>
+        </div>
+
+        {status && (
+          <Alert variant="info" className="mt-4 text-center">
+            {status}
+          </Alert>
+        )}
+      </Form>
+    </Container>
+  );
 }
 
 export default JobForm;

@@ -1,23 +1,59 @@
-require("dotenv").config({ path: "./creds.env" });
+// 1. Setup & Imports
+const path = require('path'); // Add this!
 const express = require("express");
 const cors = require("cors");
 const { google } = require("googleapis");
 const axios = require("axios");
 const cheerio = require("cheerio");
 
-const linkedin = "linkedin.com";
-
+if (!process.env.VERCEL) {
+  // This tells Node to look in the exact folder where index.js is sitting
+  require("dotenv").config({ path: "./creds.env" }); 
+}
 
 const app = express();
-app.use(cors());
-app.use(express.json());
+const linkedin = "linkedin.com";
 
-const auth = new google.auth.GoogleAuth({
-  keyFile: "./aerial-bonfire-457101-p0-a57e3e4ee10b.json",
-  scopes: ["https://www.googleapis.com/auth/spreadsheets"],
-});
+// 2. CORS Configuration
+const allowedOrigins = [
+  "https://poop-lover-99x2.vercel.app" // No trailing slash
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true);
+    const isLocalhost = /^http:\/\/localhost(:\d+)?$/.test(origin);
+    if (isLocalhost || allowedOrigins.indexOf(origin) !== -1) {
+      return callback(null, true);
+    }
+    return callback(new Error("CORS policy error"), false);
+  }
+}));
+
+app.use(express.json()); // Essential for parsing req.body
+
+// 3. Google Auth Initializer
+let auth;
+
+// Check if the variable exists before trying to parse it
+if (!process.env.GOOGLE_CREDENTIALS) {
+  console.error("❌ CRITICAL ERROR: GOOGLE_CREDENTIALS not found in environment.");
+} else {
+  try {
+    const googleCreds = JSON.parse(process.env.GOOGLE_CREDENTIALS);
+    auth = new google.auth.GoogleAuth({
+      credentials: googleCreds,
+      scopes: ["https://www.googleapis.com/auth/spreadsheets"],
+    });
+  } catch (error) {
+    console.error("❌ JSON PARSE ERROR: Check your creds.env formatting.", error.message);
+  }
+}
 
 const sheetId = process.env.GOOGLE_SHEET_ID;
+
+// 4. Routes
+app.get("/", (req, res) => res.json({ message: "FaskuHQ Backend Live! 🚀" }));
 
 // ✅ Route 1: Add job to Google Sheet
 app.post("/add-job", async (req, res) => {
@@ -113,16 +149,17 @@ app.get("/get-company", async (req, res) => {
       }
     }
 
-      return res.json({ company });
-    } catch (err) {
-      console.error("Error in /get-company:", err);
-      return res.status(500).json({ error: "Internal Server Error" });
-    }
-  });
-
-
-
-
-app.listen(3000, () => {
-  console.log("🚀 Backend running on http://localhost:3000");
+    return res.json({ company });
+  } catch (err) {
+    console.error("Error in /get-company:", err);
+    return res.status(500).json({ error: "Internal Server Error" });
+  }
 });
+
+// 5. Export and Listen
+module.exports = app;
+
+if (!process.env.VERCEL) {
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => console.log(`🚀 Local: http://localhost:${PORT}`));
+}
