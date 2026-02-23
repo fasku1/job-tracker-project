@@ -6,7 +6,7 @@ const { google } = require("googleapis");
 const axios = require("axios");
 const cheerio = require("cheerio");
 
-if (!process.env.VERCEL) {
+if (!process.env.RENDER) {
   // This tells Node to look in the exact folder where index.js is sitting
   require("dotenv").config({ path: "./creds.env" }); 
 }
@@ -159,7 +159,8 @@ app.get("/get-company", async (req, res) => {
 // 5. Export and Listen
 module.exports = app;
 
-if (!process.env.VERCEL) {
-  const PORT = process.env.PORT || 3000;
-  app.listen(PORT, () => console.log(`🚀 Local: http://localhost:${PORT}`));
-}
+// This logic works for both local and Render
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`🚀 Server is running on port ${PORT}`);
+});
