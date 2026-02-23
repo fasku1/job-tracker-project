@@ -1,0 +1,4 @@
+{
+  "version": 2,
+  "rewrites": [{ "source": "/(.*)", "destination": "/nodejs-backend/index.js" }]
+}
