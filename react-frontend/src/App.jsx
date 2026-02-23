@@ -11,7 +11,7 @@ import bounce from '../bounce.gif';
 import sleepyku from '../Untitled_Artwork.png';
 
 // This check is safer for React environments (Vite/CRA)
-const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 function JobForm() {
   const [jobTitle, setJobTitle] = useState("");
