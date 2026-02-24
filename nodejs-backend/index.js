@@ -1,56 +1,47 @@
-// 1. Setup & Imports
-const path = require('path'); // Add this!
+// 1. Setup & Imports (MUST BE AT THE TOP)
 const express = require("express");
 const cors = require("cors");
 const { google } = require("googleapis");
 const axios = require("axios");
 const cheerio = require("cheerio");
+const dotenv = require("dotenv"); // <--- Added this line!
 
-if (!process.env.RENDER) {
-  // This tells Node to look in the exact folder where index.js is sitting
-  require("dotenv").config({ path: "./creds.env" }); 
-}
+// 2. Load Environment Variables
+dotenv.config({ path: './creds.env' });
+
+console.log("--- Debugging Env Load ---");
+console.log("Sheet ID exists:", !!process.env.GOOGLE_SHEET_ID);
+console.log("Creds length:", process.env.GOOGLE_CREDENTIALS ? process.env.GOOGLE_CREDENTIALS.length : "UNDEFINED");
+console.log("--------------------------");
 
 const app = express();
-const linkedin = "linkedin.com";
-
-// 2. CORS Configuration
-const allowedOrigins = [
-  "https://poop-lover-99x2.vercel.app" // No trailing slash
-];
-
-app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin) return callback(null, true);
-    const isLocalhost = /^http:\/\/localhost(:\d+)?$/.test(origin);
-    if (isLocalhost || allowedOrigins.indexOf(origin) !== -1) {
-      return callback(null, true);
-    }
-    return callback(new Error("CORS policy error"), false);
-  }
-}));
-
-app.use(express.json()); // Essential for parsing req.body
+app.use(express.json()); // <--- IMPORTANT: Needed to read the data from your React form!
+app.use(cors({ origin: "*" }));
 
 // 3. Google Auth Initializer
 let auth;
+const linkedin = "linkedin.com";
+const sheetId = process.env.GOOGLE_SHEET_ID;
 
-// Check if the variable exists before trying to parse it
 if (!process.env.GOOGLE_CREDENTIALS) {
-  console.error("❌ CRITICAL ERROR: GOOGLE_CREDENTIALS not found in environment.");
+  console.error("❌ CRITICAL ERROR: GOOGLE_CREDENTIALS not found.");
 } else {
   try {
-    const googleCreds = JSON.parse(process.env.GOOGLE_CREDENTIALS);
+    // Safety fix for private key newlines
+    const creds = JSON.parse(process.env.GOOGLE_CREDENTIALS);
+    if (creds.private_key) {
+      creds.private_key = creds.private_key.replace(/\\n/g, '\n');
+    }
+
     auth = new google.auth.GoogleAuth({
-      credentials: googleCreds,
+      credentials: creds,
       scopes: ["https://www.googleapis.com/auth/spreadsheets"],
     });
+    console.log("✅ Google Auth Ready");
   } catch (error) {
-    console.error("❌ JSON PARSE ERROR: Check your creds.env formatting.", error.message);
+    console.error("❌ JSON PARSE ERROR:", error.message);
   }
 }
-
-const sheetId = process.env.GOOGLE_SHEET_ID;
 
 // 4. Routes
 app.get("/", (req, res) => res.json({ message: "FaskuHQ Backend Live! 🚀" }));
@@ -74,8 +65,11 @@ app.post("/add-job", async (req, res) => {
 
     res.json({ message: "✅ Job saved!" });
   } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: "❌ Could not save job" });
+    console.error("Google Sheets Error:", err); // Look at your Terminal for this!
+    res.status(500).json({
+      error: "❌ Could not save job",
+      details: err.message // This sends the real reason to React
+    });
   }
 });
 
@@ -159,7 +153,6 @@ app.get("/get-company", async (req, res) => {
 // 5. Export and Listen
 module.exports = app;
 
-// This logic works for both local and Render
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`🚀 Server is running on port ${PORT}`);
